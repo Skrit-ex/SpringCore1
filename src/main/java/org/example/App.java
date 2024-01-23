@@ -1,9 +1,11 @@
 package org.example;
 
-public class App implements Application {
+public class App {
 
-    @Override
-    public void run() {
+    public static void main(String[] args) {
+
+        Application application = new ConsoleApplication();
+        application.run();
 
 
     }
