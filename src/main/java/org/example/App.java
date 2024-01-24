@@ -12,6 +12,9 @@ public class App {
 //        application.run();
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(CoreConfiguration.class);
+        ConsoleApplication consoleApplication=  applicationContext.getBean("consoleApplication", ConsoleApplication.class);
+
+        consoleApplication.run();
 
     }
 }
