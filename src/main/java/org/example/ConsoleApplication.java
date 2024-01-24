@@ -4,9 +4,16 @@ import java.util.Optional;
 
 public class ConsoleApplication implements Application {
 
-    private final OperationService service = new OperationService();
-        private final ConsoleWriter writer = new ConsoleWriter();
-        private final ConsoleReader reader = new ConsoleReader();
+    private final OperationService service;
+        private final ConsoleWriter writer;
+        private final ConsoleReader reader;
+
+    public ConsoleApplication(OperationService service, ConsoleWriter writer, ConsoleReader reader) {
+        this.service = service;
+        this.writer = writer;
+        this.reader = reader;
+    }
+
     @Override
     public void run() {
         while (true){

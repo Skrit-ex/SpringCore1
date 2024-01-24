@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.spring.CoreConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -10,7 +11,7 @@ public class App {
 //        Application application = new ConsoleApplication();
 //        application.run();
 
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(CoreConfiguration.class);
 
     }
 }
