@@ -24,18 +24,20 @@ public class OperationService {
                 double v1 = operation.getNum1() - operation.getNum2();
                 operation.setResult(v1);
                 operationStorage.save(operation);
-                Optional.of(operation);
+                return Optional.of(operation);
             case "mul":
-                double v2 = operation.getNum1() - operation.getNum2();
+                double v2 = operation.getNum1() * operation.getNum2();
                 operation.setResult(v2);
                 operationStorage.save(operation);
-                Optional.of(operation);
+                return Optional.of(operation);
             case "div":
-                double v3 = operation.getNum1() - operation.getNum2();
+                double v3 = operation.getNum1() / operation.getNum2();
                 operation.setResult(v3);
                 operationStorage.save(operation);
-                Optional.of(operation);
+                return Optional.of(operation);
+
         }
         return Optional.empty();
     }
 }
+
