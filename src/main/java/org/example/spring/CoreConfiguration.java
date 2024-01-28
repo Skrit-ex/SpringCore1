@@ -28,7 +28,7 @@ public class CoreConfiguration {
     @Value("system> ")
     private String prefix;
 
-    @Bean
+    @Bean(initMethod = "init", destroyMethod = "destroy")
     public ConsoleReader reader(Scanner scanner){
         return new ConsoleReader(scanner);
     }
