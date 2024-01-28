@@ -2,10 +2,18 @@ package org.example.spring;
 
 
 import org.example.*;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.Scanner;
+
+
+//constructor
+//field
+//
+
+
 
 @Configuration
 public class CoreConfiguration {
@@ -17,6 +25,8 @@ public class CoreConfiguration {
                                           OperationService service){
         return new ConsoleApplication(service, writer, reader);
     }
+    @Value("system> ")
+    private String prefix;
 
     @Bean
     public ConsoleReader reader(Scanner scanner){
